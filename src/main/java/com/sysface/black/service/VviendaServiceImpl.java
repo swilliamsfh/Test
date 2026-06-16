@@ -3,9 +3,11 @@ package com.sysface.black.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.sysface.black.entitys.Vivienda;
 import com.sysface.black.repository.ViviendaRepository;
-
+@Service
 public class VviendaServiceImpl implements CrudService<Vivienda, Long>{
 
 private final ViviendaRepository viviendaRepository;

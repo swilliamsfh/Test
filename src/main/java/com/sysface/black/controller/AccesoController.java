@@ -20,9 +20,14 @@ public class AccesoController {
 
 	 private final CrudService<Acceso, Long> accesoService;
 
+	 
+	 
 	    public AccesoController(CrudService<Acceso, Long> accesoService) {
-	        this.accesoService = accesoService;
-	    }
+		super();
+		this.accesoService = accesoService;
+	}
+
+		
 
 	    @PostMapping
 	    public ResponseEntity<Acceso> crear(@RequestBody Acceso acceso) {

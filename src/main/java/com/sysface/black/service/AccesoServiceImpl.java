@@ -3,9 +3,12 @@ package com.sysface.black.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.sysface.black.entitys.Acceso;
 import com.sysface.black.repository.AccesoRepository;
 
+@Service
 public class AccesoServiceImpl implements CrudService<Acceso, Long>{
 
 private final AccesoRepository accesoRepository;

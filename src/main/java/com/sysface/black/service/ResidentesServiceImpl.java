@@ -3,9 +3,11 @@ package com.sysface.black.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.sysface.black.entitys.Residentes;
 import com.sysface.black.repository.ResidenteRepository;
-
+@Service
 public class ResidentesServiceImpl implements CrudService<Residentes, Long>{
 
 	private final ResidenteRepository residenteRepository;

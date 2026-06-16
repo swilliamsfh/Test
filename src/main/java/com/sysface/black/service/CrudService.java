@@ -3,6 +3,8 @@ package com.sysface.black.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 public interface CrudService<T,ID> {
 
 	T save(T entity);

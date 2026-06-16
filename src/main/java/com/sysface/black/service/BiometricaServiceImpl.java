@@ -3,9 +3,11 @@ package com.sysface.black.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.sysface.black.entitys.Biometrica_Facial;
 import com.sysface.black.repository.BiometricaRepository;
-
+@Service
 public class BiometricaServiceImpl implements CrudService<Biometrica_Facial, Long>{
 
 private final BiometricaRepository biometricaRepository;
