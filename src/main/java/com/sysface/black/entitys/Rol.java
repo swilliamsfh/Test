@@ -1,6 +1,6 @@
 package com.sysface.black.entitys;
 
 public enum Rol {
- Administrador,
- Moderador
+ ROLE_USER,
+ ROLE_ADMIN
 }

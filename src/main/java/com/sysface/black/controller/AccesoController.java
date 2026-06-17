@@ -20,8 +20,7 @@ public class AccesoController {
 
 	 private final CrudService<Acceso, Long> accesoService;
 
-	 
-	 
+	 	 
 	    public AccesoController(CrudService<Acceso, Long> accesoService) {
 		super();
 		this.accesoService = accesoService;
