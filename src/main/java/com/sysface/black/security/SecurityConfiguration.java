@@ -19,8 +19,7 @@ import lombok.RequiredArgsConstructor;
 public class SecurityConfiguration {
 	
 	private final JwtAuthenticationFilter jwtAuthenticationFilter ;
-	private final AuthenticationProvider authenticationProvider;
-		
+			
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
@@ -34,7 +33,7 @@ public class SecurityConfiguration {
         		 .requestMatchers("/api/v1/**")
                  .permitAll().anyRequest().authenticated())
          .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-         .authenticationProvider(authenticationProvider).addFilterBefore(
+         .addFilterBefore(
                  jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
          ;
 		

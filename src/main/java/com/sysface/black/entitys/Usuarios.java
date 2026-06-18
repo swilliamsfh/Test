@@ -1,7 +1,7 @@
 package com.sysface.black.entitys;
 
+import java.time.LocalDate;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -40,14 +40,15 @@ public class Usuarios implements UserDetails{
 	private Long id;
 	@Column(unique=true, nullable = false)
 	private String email;
-	private String USUARIO;
+	@Column(unique = true)
+	private String username;
 	@Column(nullable = false)
 	private String PASSWORD;
 	private String NOMBRE;
 	private String PATERNO;
 	private String MATERNO;
-	private int PHONE;
-	private Date FECHA_ALTA;
+	private Long PHONE;
+	private LocalDate FECHA_ALTA;
 	@Enumerated(EnumType.STRING)
 	private Rol role;
 	

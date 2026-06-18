@@ -12,7 +12,7 @@ public class ManagementController {
 
     
     @GetMapping("/dashboard")
-    @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_USER', 'ROLE_ADMIN','ROLE_MODERATOR')")
     public ResponseEntity<String> userDashboard() {
         return ResponseEntity.ok("Acceso permitido: Panel General.");
     }

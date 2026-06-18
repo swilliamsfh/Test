@@ -10,6 +10,6 @@ import com.sysface.black.entitys.Usuarios;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuarios, Long>{
 
-	Optional<Usuarios> findByEmail(String email);
+	Optional<Usuarios> findByUsernameOrEmail(String username,String email);
 	
 }

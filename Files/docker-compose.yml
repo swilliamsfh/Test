@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: local-rabbitmq
+    ports:
+      # Puerto de comunicación de datos (El que usa Spring Boot)
+      - "5672:5672"
+      # Puerto de la interfaz gráfica web (Panel de administración)
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      # Mantiene los datos y las colas guardadas si apagas el contenedor
+      - rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  rabbitmq_data:
